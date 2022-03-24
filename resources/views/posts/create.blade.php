@@ -9,22 +9,18 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
-                    <form
-                        action="{{ route('posts.store') }}"
-                        method="POST"
-                        enctype="multipart/form-date"
-                    >
+                    <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Título *</label>
                             <input type="text" name="title" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Imagen</label>
+                            <label>Image</label>
                             <input type="file" name="file">
                         </div>
                         <div class="form-group">
